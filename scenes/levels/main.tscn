@@ -1,11 +1,66 @@
 [gd_scene format=3 uid="uid://cef5xs76vov50"]
 
-[ext_resource type="Texture2D" uid="uid://bje1j4488wwif" path="res://assets/sprites/moon/0013.png" id="1_72ix8"]
+[ext_resource type="Texture2D" uid="uid://squ7pynhe2ae" path="res://assets/sprites/Cueva1.png" id="1_u81e1"]
+[ext_resource type="Texture2D" uid="uid://tmp802gf7jil" path="res://assets/sprites/Cueva3.png" id="2_b6bv0"]
+[ext_resource type="Texture2D" uid="uid://vwhyb0qhrmk1" path="res://assets/sprites/Outdoor_Decor_Free.png" id="3_ubwgw"]
+[ext_resource type="Texture2D" uid="uid://dfrd0j1630438" path="res://assets/sprites/glenys-battle.png" id="3_y0acb"]
+[ext_resource type="Script" uid="uid://c222ch8qxx4ns" path="res://scripts/MovimientoJugador.gd" id="5_vkq25"]
+[ext_resource type="Texture2D" uid="uid://cih5w0em76fch" path="res://assets/sprites/left_jab.png" id="6_ubwgw"]
+[ext_resource type="Texture2D" uid="uid://bmrebiiahajoa" path="res://assets/sprites/Tienda.png" id="7_vkq25"]
+[ext_resource type="Script" uid="uid://bxt3dhqk7cvws" path="res://scripts/button.gd" id="8_vkq25"]
+[ext_resource type="Script" uid="uid://ceh6v272d5lyr" path="res://scripts/berenjenas.gd" id="9_7lrji"]
+[ext_resource type="Script" uid="uid://dqnaxe4gu70hl" path="res://scripts/monedas.gd" id="10_rssyh"]
 
 [node name="Main" type="Node2D" unique_id=311375995]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1054632403]
+[node name="Cueva1" type="Sprite2D" parent="." unique_id=663676166]
+position = Vector2(-322, -54)
+scale = Vector2(0.36884236, 0.4698697)
+texture = ExtResource("1_u81e1")
 
-[node name="0013" type="Sprite2D" parent="." unique_id=820873196]
-position = Vector2(707, 447)
-texture = ExtResource("1_72ix8")
+[node name="Cueva3" type="Sprite2D" parent="." unique_id=323381140]
+position = Vector2(-1, -239)
+scale = Vector2(0.32207206, 0.44200003)
+texture = ExtResource("2_b6bv0")
+
+[node name="Berenjena" type="Sprite2D" parent="." unique_id=778140318]
+position = Vector2(-3.8146973e-06, 273.99997)
+scale = Vector2(2.5, 2.1153846)
+texture = ExtResource("3_ubwgw")
+script = ExtResource("9_7lrji")
+
+[node name="Jugador" type="Sprite2D" parent="." unique_id=216592504]
+position = Vector2(2, 193)
+scale = Vector2(1.8030303, 1.6944444)
+texture = ExtResource("3_y0acb")
+script = ExtResource("5_vkq25")
+
+[node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=206588288]
+
+[node name="LeftJab" type="Sprite2D" parent="." unique_id=1029162378]
+position = Vector2(1, -202.00002)
+scale = Vector2(1.625, 1.5)
+texture = ExtResource("6_ubwgw")
+
+[node name="Tienda" type="Sprite2D" parent="." unique_id=661511127]
+position = Vector2(302, 132)
+scale = Vector2(0.272, 0.252)
+texture = ExtResource("7_vkq25")
+
+[node name="Button" type="Button" parent="." unique_id=1858393553]
+offset_left = 37.0
+offset_top = 46.0
+offset_right = 159.0
+offset_bottom = 109.0
+script = ExtResource("8_vkq25")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1133361959]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=96226236]
+offset_left = 16.0
+offset_top = 21.0
+offset_right = 110.0
+offset_bottom = 68.0
+script = ExtResource("10_rssyh")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b21rnlcdaixwv"]
+
+[ext_resource type="Texture2D" uid="uid://7qj5bj21ik6p" path="res://assets/sprites/ruleta1.png" id="2_1yq0f"]
+[ext_resource type="Script" uid="uid://c2g4dw5xx2ygc" path="res://scripts/salir.gd" id="2_csajx"]
+[ext_resource type="Script" uid="uid://brlr42qecgsee" path="res://scripts/aleatoriedad.gd" id="2_yukef"]
+[ext_resource type="Script" uid="uid://cxiitbk7okmvo" path="res://scripts/porcentajes.gd" id="4_1yq0f"]
+[ext_resource type="Script" uid="uid://desgwqpk3wc4b" path="res://scripts/monedas_ruleta1.gd" id="5_anrdh"]
+
+[node name="Ruleta" type="Node2D" unique_id=1901643480]
+
+[node name="Salir" type="Button" parent="." unique_id=1868304162]
+offset_left = 252.0
+offset_top = 15.0
+offset_right = 313.0
+offset_bottom = 69.0
+text = "Salir"
+script = ExtResource("2_csajx")
+
+[node name="Ruleta1" type="Sprite2D" parent="." unique_id=915829334]
+position = Vector2(500, 264)
+texture = ExtResource("2_1yq0f")
+script = ExtResource("2_yukef")
+
+[node name="Porcentajes" type="Label" parent="." unique_id=1292360055]
+offset_left = 760.0
+offset_top = 120.0
+offset_right = 935.0
+offset_bottom = 430.0
+script = ExtResource("4_1yq0f")
+
+[node name="Label" type="Label" parent="." unique_id=16423595]
+offset_left = 1031.0
+offset_right = 1151.0
+offset_bottom = 65.0
+script = ExtResource("5_anrdh")
+
+[connection signal="pressed" from="Salir" to="Salir" method="_on_pressed"]

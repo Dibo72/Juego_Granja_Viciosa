@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dmp6iaax524wg"]
+
+[ext_resource type="Texture2D" uid="uid://8dlnf0f7txx4" path="res://assets/sprites/Captura de pantalla 2026-10-16 122558.png" id="1_o28c8"]
+
+[node name="Node2D" type="Node2D" unique_id=511132349]
+
+[node name="CapturaDePantalla20261016122558" type="Sprite2D" parent="." unique_id=1646723806]
+position = Vector2(606, 322)
+scale = Vector2(1.1382661, 1.1254356)
+texture = ExtResource("1_o28c8")

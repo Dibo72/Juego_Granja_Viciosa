@@ -15,10 +15,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Global.monedas < 10:
-		get_tree().change_scene_to_file("res://scenes/levels/main.tscn")
 	
-	if Input.is_action_just_pressed("girar_ruleta"):
+	if Input.is_action_just_pressed("girar_ruleta") and Global.monedas >=10:
 		Global.monedas-=10
 			
 		var eleccion = elegir_color()

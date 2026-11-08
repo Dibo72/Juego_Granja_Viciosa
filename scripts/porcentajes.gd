@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
 	pass
 	
 func mostrar_porcentajes() -> void:
-	text = "Rojo: " + str(ruleta.recompensas[0]) + "berenjenas\nVerde: " + str(ruleta.recompensas[1]) + "berenjenas\nAzul: " + str(ruleta.recompensas[2]) + "berenjenas"
+	text = "Rojo: " + str(ruleta.recompensas[0]) + " berenjenas" + " " + str(ruleta.porcentajes[0]) + "%" + "\nVerde: " + str(ruleta.recompensas[1]) + " berenjenas" + " " + str(ruleta.porcentajes[1]) + "%" + "\nAzul: " + str(ruleta.recompensas[2]) + " berenjenas" + " " + str(ruleta.porcentajes[2]) + "%"

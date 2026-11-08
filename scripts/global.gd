@@ -1,11 +1,35 @@
 extends Node
 
 var monedas = 0
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var juegos1: int
 
+var porcMedia =32.0
+var porcAlta=10.0
+var porcBaja: float:
+	#ponemos el get para que se recalcule siempre
+	get:
+		return 100.0 - porcMedia - porcAlta
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+var recomMedia = 15
+var recomAlta=40
+var recomBaja = 5
+
+var girando := false
+
+var berenejaMejoraNivel = 0
+var berenjenaMejoraValor = 30
+
+var porcentajeMejoraNivel = 0
+var porcentajeMejoraValor = 100
+
+var cueva1= false
+var cueva2= false
+var cueva3=false
+
 func _process(delta: float) -> void:
-	pass
+	if monedas>=10:
+		cueva1 = true
+	if monedas >= 500:
+		cueva2= true
+	if monedas >= 5000:
+		cueva3= true

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b21rnlcdaixwv"]
 
+[ext_resource type="Texture2D" uid="uid://dyfw7xtokb54f" path="res://assets/sprites/Fondos/fondo_cueva1.png" id="1_oirh8"]
 [ext_resource type="Texture2D" uid="uid://7qj5bj21ik6p" path="res://assets/sprites/ruleta1.png" id="2_1yq0f"]
 [ext_resource type="Script" uid="uid://c2g4dw5xx2ygc" path="res://scripts/salir.gd" id="2_csajx"]
 [ext_resource type="Script" uid="uid://brlr42qecgsee" path="res://scripts/aleatoriedad.gd" id="2_yukef"]
@@ -8,11 +9,15 @@
 
 [node name="Ruleta" type="Node2D" unique_id=1901643480]
 
+[node name="FondoCueva1" type="Sprite2D" parent="." unique_id=821093266]
+position = Vector2(575, 328)
+texture = ExtResource("1_oirh8")
+
 [node name="Salir" type="Button" parent="." unique_id=1868304162]
-offset_left = 252.0
-offset_top = 15.0
-offset_right = 313.0
-offset_bottom = 69.0
+offset_left = 100.0
+offset_top = 11.0
+offset_right = 161.0
+offset_bottom = 65.0
 text = "Salir"
 script = ExtResource("2_csajx")
 
@@ -22,10 +27,10 @@ texture = ExtResource("2_1yq0f")
 script = ExtResource("2_yukef")
 
 [node name="Porcentajes" type="Label" parent="." unique_id=1292360055]
-offset_left = 760.0
-offset_top = 120.0
-offset_right = 935.0
-offset_bottom = 430.0
+offset_left = 730.0
+offset_top = 266.0
+offset_right = 905.0
+offset_bottom = 576.0
 script = ExtResource("4_1yq0f")
 
 [node name="Label" type="Label" parent="." unique_id=16423595]
@@ -33,5 +38,14 @@ offset_left = 1031.0
 offset_right = 1151.0
 offset_bottom = 65.0
 script = ExtResource("5_anrdh")
+
+[node name="Label2" type="Label" parent="." unique_id=1371951408]
+offset_left = 394.0
+offset_top = 516.0
+offset_right = 612.0
+offset_bottom = 602.0
+text = "ESPACIO"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Salir" to="Salir" method="_on_pressed"]

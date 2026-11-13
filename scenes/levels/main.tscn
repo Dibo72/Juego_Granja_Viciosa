@@ -70,11 +70,12 @@ scale = Vector2(2.5, 2.1153846)
 texture = ExtResource("3_ubwgw")
 script = ExtResource("9_7lrji")
 
-[node name="Jugador" type="Sprite2D" parent="." unique_id=216592504]
+[node name="Jugador" type="Sprite2D" parent="." unique_id=216592504 node_paths=PackedStringArray("fondo")]
 position = Vector2(2, 193)
 scale = Vector2(1.8030303, 1.6944444)
 texture = ExtResource("3_y0acb")
 script = ExtResource("5_vkq25")
+fondo = NodePath("../Fondo")
 
 [node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=206588288 node_paths=PackedStringArray("fondo")]
 script = ExtResource("9_6ui35")

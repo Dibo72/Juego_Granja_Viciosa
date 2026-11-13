@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b6pcfyv1alnhg"]
 
+[ext_resource type="Script" uid="uid://ymsfwk5frtqx" path="res://scripts/tiendaMejoras.gd" id="1_mj2ka"]
 [ext_resource type="Texture2D" uid="uid://xexnoifxbnq6" path="res://assets/sprites/Mejoras/Mejora_Berenjena.png" id="1_qst8q"]
 [ext_resource type="Texture2D" uid="uid://dlrvcq28sordq" path="res://assets/sprites/Fondos/fondo_tienda.png" id="1_vecoi"]
 [ext_resource type="Script" uid="uid://c0ta4ondv66xv" path="res://scripts/berenjena_mejora.gd" id="2_nxs8b"]
@@ -12,12 +13,51 @@
 [ext_resource type="Script" uid="uid://duewhnqx5g8aq" path="res://scripts/informacionPorcentajeMejora.gd" id="8_kwaag"]
 
 [node name="Tienda" type="Node2D" unique_id=1515090223]
+script = ExtResource("1_mj2ka")
 
 [node name="FondoTienda" type="Sprite2D" parent="." unique_id=2126823672]
 position = Vector2(579, 324)
 texture = ExtResource("1_vecoi")
 
-[node name="Berenjena_Mejora" type="Button" parent="." unique_id=633567663]
+[node name="ButtonSalir" type="Button" parent="." unique_id=475384449]
+offset_left = 5.0
+offset_top = 573.0
+offset_right = 118.0
+offset_bottom = 647.0
+text = "Salir"
+script = ExtResource("6_mj2ka")
+
+[node name="ButtonMina" type="Button" parent="." unique_id=1350319214]
+offset_left = 511.0
+offset_top = 576.0
+offset_right = 627.0
+offset_bottom = 649.0
+text = "Mina"
+
+[node name="ButtonPesca" type="Button" parent="." unique_id=1955464741]
+offset_left = 677.0
+offset_top = 575.0
+offset_right = 793.0
+offset_bottom = 648.0
+text = "Pesca"
+
+[node name="Button4" type="Button" parent="." unique_id=208654232]
+offset_left = 845.0
+offset_top = 575.0
+offset_right = 961.0
+offset_bottom = 648.0
+
+[node name="ButtonBerenjena" type="Button" parent="." unique_id=849964422]
+offset_left = 334.0
+offset_top = 575.0
+offset_right = 450.0
+offset_bottom = 648.0
+text = "Berejena"
+
+[node name="MejoraMina" type="Node2D" parent="." unique_id=1516315728]
+visible = false
+
+[node name="Berenjena_Mejora" type="Button" parent="MejoraMina" unique_id=633567663]
 offset_left = 582.0
 offset_top = 340.0
 offset_right = 672.0
@@ -26,7 +66,7 @@ icon = ExtResource("1_qst8q")
 expand_icon = true
 script = ExtResource("2_nxs8b")
 
-[node name="Datos" type="Label" parent="Berenjena_Mejora" unique_id=1617564228]
+[node name="Datos" type="Label" parent="MejoraMina/Berenjena_Mejora" unique_id=1617564228]
 layout_mode = 0
 offset_left = 90.0
 offset_top = 4.0
@@ -35,7 +75,7 @@ offset_bottom = 56.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 script = ExtResource("3_y471s")
 
-[node name="Informacion" type="Label" parent="Berenjena_Mejora" unique_id=893822735]
+[node name="Informacion" type="Label" parent="MejoraMina/Berenjena_Mejora" unique_id=893822735]
 layout_mode = 0
 offset_left = -27.0
 offset_top = 88.0
@@ -44,7 +84,7 @@ offset_bottom = 160.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 script = ExtResource("4_y471s")
 
-[node name="Porcentaje_Mejora" type="Button" parent="." unique_id=497817970]
+[node name="Porcentaje_Mejora" type="Button" parent="MejoraMina" unique_id=497817970]
 offset_left = 826.0
 offset_top = 203.0
 offset_right = 919.0
@@ -53,7 +93,7 @@ icon = ExtResource("4_kwaag")
 expand_icon = true
 script = ExtResource("5_vecoi")
 
-[node name="Datos" type="Label" parent="Porcentaje_Mejora" unique_id=1122679780]
+[node name="Datos" type="Label" parent="MejoraMina/Porcentaje_Mejora" unique_id=1122679780]
 layout_mode = 0
 offset_left = 93.0
 offset_top = 6.0
@@ -62,7 +102,7 @@ offset_bottom = 54.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 script = ExtResource("6_nxs8b")
 
-[node name="Informacion" type="Label" parent="Porcentaje_Mejora" unique_id=618113636]
+[node name="Informacion" type="Label" parent="MejoraMina/Porcentaje_Mejora" unique_id=618113636]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 95.0
@@ -71,22 +111,51 @@ offset_bottom = 148.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 script = ExtResource("8_kwaag")
 
-[node name="Button" type="Button" parent="." unique_id=475384449]
-offset_left = 5.0
-offset_top = 573.0
-offset_right = 118.0
-offset_bottom = 647.0
-text = "Salir"
-script = ExtResource("6_mj2ka")
+[node name="MejoraBerenjena" type="Node2D" parent="." unique_id=1342985982]
+visible = false
 
-[connection signal="mouse_entered" from="Berenjena_Mejora" to="Berenjena_Mejora/Datos" method="_on_berenjena_mejora_mouse_entered"]
-[connection signal="mouse_entered" from="Berenjena_Mejora" to="Berenjena_Mejora/Informacion" method="_on_berenjena_mejora_mouse_entered"]
-[connection signal="mouse_exited" from="Berenjena_Mejora" to="Berenjena_Mejora/Datos" method="_on_berenjena_mejora_mouse_exited"]
-[connection signal="mouse_exited" from="Berenjena_Mejora" to="Berenjena_Mejora/Informacion" method="_on_berenjena_mejora_mouse_exited"]
-[connection signal="pressed" from="Berenjena_Mejora" to="Berenjena_Mejora" method="_on_pressed"]
-[connection signal="mouse_entered" from="Porcentaje_Mejora" to="Porcentaje_Mejora/Datos" method="_on_porcentaje_mejora_mouse_entered"]
-[connection signal="mouse_entered" from="Porcentaje_Mejora" to="Porcentaje_Mejora/Informacion" method="_on_porcentaje_mejora_mouse_entered"]
-[connection signal="mouse_exited" from="Porcentaje_Mejora" to="Porcentaje_Mejora/Datos" method="_on_porcentaje_mejora_mouse_exited"]
-[connection signal="mouse_exited" from="Porcentaje_Mejora" to="Porcentaje_Mejora/Informacion" method="_on_porcentaje_mejora_mouse_exited"]
-[connection signal="pressed" from="Porcentaje_Mejora" to="Porcentaje_Mejora" method="_on_pressed"]
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Berenjena_Mejora" type="Button" parent="MejoraBerenjena" unique_id=876880127]
+offset_left = 581.0
+offset_top = 207.0
+offset_right = 671.0
+offset_bottom = 297.0
+icon = ExtResource("1_qst8q")
+expand_icon = true
+script = ExtResource("2_nxs8b")
+
+[node name="Datos" type="Label" parent="MejoraBerenjena/Berenjena_Mejora" unique_id=394085398]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 4.0
+offset_right = 179.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+script = ExtResource("3_y471s")
+
+[node name="Informacion" type="Label" parent="MejoraBerenjena/Berenjena_Mejora" unique_id=1833031999]
+layout_mode = 0
+offset_left = -27.0
+offset_top = 88.0
+offset_right = 114.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+script = ExtResource("4_y471s")
+
+[connection signal="pressed" from="ButtonSalir" to="ButtonSalir" method="_on_pressed"]
+[connection signal="pressed" from="ButtonMina" to="." method="_on_button_mina_pressed"]
+[connection signal="pressed" from="ButtonBerenjena" to="." method="_on_button_berenjena_pressed"]
+[connection signal="mouse_entered" from="MejoraMina/Berenjena_Mejora" to="MejoraMina/Berenjena_Mejora/Datos" method="_on_berenjena_mejora_mouse_entered"]
+[connection signal="mouse_entered" from="MejoraMina/Berenjena_Mejora" to="MejoraMina/Berenjena_Mejora/Informacion" method="_on_berenjena_mejora_mouse_entered"]
+[connection signal="mouse_exited" from="MejoraMina/Berenjena_Mejora" to="MejoraMina/Berenjena_Mejora/Datos" method="_on_berenjena_mejora_mouse_exited"]
+[connection signal="mouse_exited" from="MejoraMina/Berenjena_Mejora" to="MejoraMina/Berenjena_Mejora/Informacion" method="_on_berenjena_mejora_mouse_exited"]
+[connection signal="pressed" from="MejoraMina/Berenjena_Mejora" to="MejoraMina/Berenjena_Mejora" method="_on_pressed"]
+[connection signal="mouse_entered" from="MejoraMina/Porcentaje_Mejora" to="MejoraMina/Porcentaje_Mejora/Datos" method="_on_porcentaje_mejora_mouse_entered"]
+[connection signal="mouse_entered" from="MejoraMina/Porcentaje_Mejora" to="MejoraMina/Porcentaje_Mejora/Informacion" method="_on_porcentaje_mejora_mouse_entered"]
+[connection signal="mouse_exited" from="MejoraMina/Porcentaje_Mejora" to="MejoraMina/Porcentaje_Mejora/Datos" method="_on_porcentaje_mejora_mouse_exited"]
+[connection signal="mouse_exited" from="MejoraMina/Porcentaje_Mejora" to="MejoraMina/Porcentaje_Mejora/Informacion" method="_on_porcentaje_mejora_mouse_exited"]
+[connection signal="pressed" from="MejoraMina/Porcentaje_Mejora" to="MejoraMina/Porcentaje_Mejora" method="_on_pressed"]
+[connection signal="mouse_entered" from="MejoraBerenjena/Berenjena_Mejora" to="MejoraBerenjena/Berenjena_Mejora/Datos" method="_on_berenjena_mejora_mouse_entered"]
+[connection signal="mouse_entered" from="MejoraBerenjena/Berenjena_Mejora" to="MejoraBerenjena/Berenjena_Mejora/Informacion" method="_on_berenjena_mejora_mouse_entered"]
+[connection signal="mouse_exited" from="MejoraBerenjena/Berenjena_Mejora" to="MejoraBerenjena/Berenjena_Mejora/Datos" method="_on_berenjena_mejora_mouse_exited"]
+[connection signal="mouse_exited" from="MejoraBerenjena/Berenjena_Mejora" to="MejoraBerenjena/Berenjena_Mejora/Informacion" method="_on_berenjena_mejora_mouse_exited"]
+[connection signal="pressed" from="MejoraBerenjena/Berenjena_Mejora" to="MejoraBerenjena/Berenjena_Mejora" method="_on_pressed"]

@@ -10,12 +10,23 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Global.cueva1:
-		var distanceRuleta: float = $Jugador.global_position.distance_to(
+		var distanceRuleta1: float = $Jugador.global_position.distance_to(
 			$Cueva1.global_position
 		)
 		
-		if distanceRuleta <= radio:
+		var distanceRuleta2: float = $Jugador.global_position.distance_to(
+			$Cueva2.global_position
+		)
+		
+		var distanceRuleta3: float = $Jugador.global_position.distance_to(
+			$Cueva3.global_position
+		)
+		
+		if distanceRuleta1 <= radio:
 			get_tree().change_scene_to_file("res://scenes/levels/Ruleta.tscn")
+			
+		if distanceRuleta2 <= radio:
+			get_tree().change_scene_to_file("res://scenes/levels/Mina.tscn")
 
 		var distanceTienda: float = $Jugador.global_position.distance_to(
 			$Tienda.global_position

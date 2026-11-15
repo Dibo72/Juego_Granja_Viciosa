@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://c2g4dw5xx2ygc" path="res://scripts/salir.gd" id="6_mj2ka"]
 [ext_resource type="Script" uid="uid://bscdh03w4m2p2" path="res://scripts/mostrar_Porcentaje_Mejora.gd" id="6_nxs8b"]
 [ext_resource type="Script" uid="uid://duewhnqx5g8aq" path="res://scripts/informacionPorcentajeMejora.gd" id="8_kwaag"]
+[ext_resource type="Script" uid="uid://cqmen4gqjnhti" path="res://scripts/Mejoras/berenjena_berenjena_mejora.gd" id="12_wh2n8"]
 
 [node name="Tienda" type="Node2D" unique_id=1515090223]
 script = ExtResource("1_mj2ka")
@@ -121,7 +122,7 @@ offset_right = 671.0
 offset_bottom = 297.0
 icon = ExtResource("1_qst8q")
 expand_icon = true
-script = ExtResource("2_nxs8b")
+script = ExtResource("12_wh2n8")
 
 [node name="Datos" type="Label" parent="MejoraBerenjena/Berenjena_Mejora" unique_id=394085398]
 layout_mode = 0

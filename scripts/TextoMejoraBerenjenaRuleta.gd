@@ -1,6 +1,6 @@
 extends Label
 
-@onready var boton: mejoraBerenjena = get_parent()
+@onready var boton = get_parent()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

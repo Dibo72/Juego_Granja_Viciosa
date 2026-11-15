@@ -1,5 +1,10 @@
 extends Node
 
+var dialogo_activo := false
+var dialogo_inicio_visto := false
+var dialogo_10_visto := false
+var recolectando := false
+
 var monedas = 0
 var juegos1: int
 
@@ -18,6 +23,10 @@ var girando := false
 
 var berenejaMejoraNivel = 0
 var berenjenaMejoraValor = 30
+
+var berenejaberenjenaMejoraNivel = 0
+var berenjenaberenjenaMejoraValor = 10
+var berenjenaMonedas = 1
 
 var porcentajeMejoraNivel = 0
 var porcentajeMejoraValor = 100

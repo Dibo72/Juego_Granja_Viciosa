@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://b35533uq3dxkc" path="res://assets/sprites/Cueva3_Bloqueada.png" id="7_qgoyv"]
 [ext_resource type="Texture2D" uid="uid://bmrebiiahajoa" path="res://assets/sprites/Tienda.png" id="7_vkq25"]
 [ext_resource type="Script" uid="uid://cdl58apaex5jd" path="res://scripts/camera_2d.gd" id="9_6ui35"]
-[ext_resource type="Script" uid="uid://ceh6v272d5lyr" path="res://scripts/berenjenas.gd" id="9_7lrji"]
 [ext_resource type="Script" uid="uid://dfiwp15b4ld1r" path="res://scripts/guardian_cueba_3.gd" id="9_px1c8"]
 [ext_resource type="Script" uid="uid://dqnaxe4gu70hl" path="res://scripts/monedas.gd" id="10_rssyh"]
 [ext_resource type="Texture2D" uid="uid://d186td2tr2ksg" path="res://assets/sprites/Cueva2.png" id="13_y56qp"]
@@ -68,7 +67,6 @@ script = ExtResource("9_px1c8")
 position = Vector2(-234.99998, 362.99997)
 scale = Vector2(2.5, 2.1153846)
 texture = ExtResource("3_ubwgw")
-script = ExtResource("9_7lrji")
 
 [node name="Jugador" type="Sprite2D" parent="." unique_id=216592504 node_paths=PackedStringArray("fondo")]
 position = Vector2(2, 193)

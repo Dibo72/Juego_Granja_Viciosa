@@ -15,10 +15,16 @@ func mostrar_categoria(cat: String):
 
 
 func _on_button_berenjena_pressed() -> void:
+	invisible()
 	$MejoraBerenjena.visible = true
 	
 
 
 
 func _on_button_mina_pressed() -> void:
-	$MejoraMina.activar()
+	invisible()
+	$MejoraMina.visible = true
+	
+func invisible():
+	$MejoraBerenjena.visible = false
+	$MejoraMina.visible = false
